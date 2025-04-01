@@ -1,0 +1,97 @@
+/* Global Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for centering the form */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid #e1e1e1;
+}
+
+h1 {
+    text-align: center;
+    color: #2d3e50;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #2d3e50;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    background-color: #fafafa;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #5cb85c;
+    background-color: #eaf7e7;
+}
+
+input::placeholder, select {
+    color: #a0a0a0;
+}
+
+.submit-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.result h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #155724;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Car Price Prediction</h1>
+            <form action="/predict" method="POST">
+                <div class="form-group">
+                    <label for="Year">Year:</label>
+                    <input type="number" id="Year" name="Year" required placeholder="Enter year of manufacture">
+                </div>
+                <div class="form-group">
+                    <label for="Brand">Brand:</label>
+                    <select id="Brand" name="Brand" required>
+                        <option value="">Select Brand</option>
+                        <option value="Kia">Kia</option>
+                        <option value="Chevrolet">Chevrolet</option>
+                        <option value="Mercedes">Mercedes</option>
+                        <option value="Audi">Audi</option>
+                        <option value="Volkswagen">Volkswagen</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Honda">Honda</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Hyundai">Hyundai</option>
+                        <option value="Ford">Ford</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Mileage">Mileage (km travelled):</label>
+                    <input type="number" step="0.01" id="Mileage" name="Mileage" required placeholder="Enter mileage in km">
+                </div>
+                <div class="form-group">
+                    <label for="Engine_Size">Engine Size:</label>
+                    <input type="float" min="1" max="6" id="Engine_Size" name="Engine_Size" required placeholder="Enter engine size (1-6)">
+                </div>
+                <div class="form-group">
+                    <label for="Fuel_Type">Fuel Type:</label>
+                    <select id="Fuel_Type" name="Fuel_Type" required>
+                        <option value="">Select Fuel Type</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="Hybrid">Hybrid</option>
+                        <option value="Electric">Electric</option>
+                        <option value="Petrol">Petrol</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Transmission">Transmission:</label>
+                    <select id="Transmission" name="Transmission" required>
+                        <option value="">Select Transmission</option>
+                        <option value="Manual">Manual</option>
+                        <option value="Automatic">Automatic</option>
+                        <option value="Semi-Automatic">Semi-Automatic</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Predict Price</button>
+                </div>
+            </form>
+            {% if prediction_text %}
+                <div class="result">
+                    <h2>{{ prediction_text }}</h2>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
